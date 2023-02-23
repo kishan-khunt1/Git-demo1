@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Home Page";
+}
+<h1></h1>
+<div class="border border-dark rounded p-5">
+<form asp-controller="Home"  >
+    <span class="fw-bold">Number1:</span> <input type="text" name="num1" placeholder="Enter First Number" class="form-control my-3 p-2" />
+        <span class="fw-bold">Number2:</span><input type="text" name="num2" placeholder="Enter Second Number" class="form-control my-3 p-2" />
+        <div class="input-group my-5">
+            <input type="text" value="@ViewBag.SumResult @ViewBag.SubtractResult @ViewBag.MultiResult @ViewBag.DivResult" class="form-control p-2" placeholder="Answer">
+            <button class="btn btn-outline-success mx-3 border border-success rounded" asp-action="Add">Addition</button>
+            <button class="btn btn-outline-danger mx-3 border border-danger rounded" asp-action="Subtract">Subtraction</button>
+            <button class="btn btn-outline-warning mx-3 border border-warning rounded" asp-action="Multi">Multiplication</button>
+            <button class="btn btn-outline-secondary mx-3 border border-secondary rounded" asp-action="Div">Division</button>
+        </div>
+</form>

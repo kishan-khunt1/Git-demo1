@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "LOC_CountryList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Data
+@model DataTable
+<section style="position:relative;top:50px;">
+<div class="d-flex container">
+    <div class="fw-bold fs-3">Country List</div>
+    <div class="position-absolute" style="right:0%;">
+        <a asp-controller="LOC_Country" asp-action="Add" class="btn btn-success">Add Country</a>
+    </div>
+</div>
+<table class="table table-hover my-lg-5">
+    <thead>
+        <tr class="table-secondary text-center ">
+            <th scope="col" class="py-4">Country ID</th>
+            <th scope="col" class="py-4">Country Name</th>
+            <th scope="col" class="py-4">Country Code</th>
+            <th scope="col" class="py-4">Creation Date</th>
+            <th scope="col" class="py-4">Modification Date</th>
+            <th scope="col" class="py-4">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow dr in Model.Rows)
+        {
+            <tr class="table-light table-striped text-center">
+                <td class="py-4">@dr["CountryID"]</td>
+                <td class="py-4">@dr["CountryName"]</td>
+                <td class="py-4">@dr["CountryCode"]</td>
+                <td class="py-4">@Convert.ToDateTime(dr["CreationDate"]).ToString("yyyy-MM-dd")</td>
+                <td class="py-4">@Convert.ToDateTime(dr["ModificationDate"]).ToString("yyyy-MM-dd")</td>
+                <td class="d-flex" style="margin:auto; justify-content:center;">
+                    <form method="post" asp-controller="LOC_Country" asp-action="Delete">
+                    <input type="hidden" name="CountryID" value="@Convert.ToInt32(dr["CountryID"])" />
+                        <button type="submit" class="btn btn-danger my-3 mx-2" onclick="return confirm('Are you sure you want to delete ?')">Delete</button>
+                    </form>
+                    <form method="post" asp-controller="LOC_Country" asp-action="Add">
+                        <input type="hidden" name="CountryID" value="@Convert.ToInt32(dr["CountryID"])" />
+                        <button type="submit" class="btn btn-secondary my-3 mx-2">Edit</button>
+                    </form>
+                </td>
+            </tr>
+        }        
+    </tbody>
+</table>
+</section>
+
+

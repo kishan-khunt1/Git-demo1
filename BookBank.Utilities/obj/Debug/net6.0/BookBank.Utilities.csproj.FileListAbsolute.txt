@@ -1,0 +1,12 @@
+C:\Users\ABC\source\repos\BookBank.Utilities\bin\Debug\net6.0\BookBank.Utilities.deps.json
+C:\Users\ABC\source\repos\BookBank.Utilities\bin\Debug\net6.0\BookBank.Utilities.dll
+C:\Users\ABC\source\repos\BookBank.Utilities\bin\Debug\net6.0\BookBank.Utilities.pdb
+C:\Users\ABC\source\repos\BookBank.Utilities\obj\Debug\net6.0\BookBank.Utilities.csproj.AssemblyReference.cache
+C:\Users\ABC\source\repos\BookBank.Utilities\obj\Debug\net6.0\BookBank.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABC\source\repos\BookBank.Utilities\obj\Debug\net6.0\BookBank.Utilities.AssemblyInfoInputs.cache
+C:\Users\ABC\source\repos\BookBank.Utilities\obj\Debug\net6.0\BookBank.Utilities.AssemblyInfo.cs
+C:\Users\ABC\source\repos\BookBank.Utilities\obj\Debug\net6.0\BookBank.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\ABC\source\repos\BookBank.Utilities\obj\Debug\net6.0\BookBank.Utilities.dll
+C:\Users\ABC\source\repos\BookBank.Utilities\obj\Debug\net6.0\refint\BookBank.Utilities.dll
+C:\Users\ABC\source\repos\BookBank.Utilities\obj\Debug\net6.0\BookBank.Utilities.pdb
+C:\Users\ABC\source\repos\BookBank.Utilities\obj\Debug\net6.0\ref\BookBank.Utilities.dll

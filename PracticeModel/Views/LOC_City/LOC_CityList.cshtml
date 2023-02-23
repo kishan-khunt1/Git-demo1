@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "LOC_CityList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using System.Data
+@model DataTable
+<section style="position:relative;top:50px;">
+<div class="d-flex container">
+    <div class="fw-bold fs-3">City List</div>
+    <div class="position-absolute" style="right:0%;">
+        <a asp-controller="LOC_City" asp-action="Add" class="btn btn-success">Add City</a>
+    </div>
+</div>
+<table class="table table-hover my-lg-5">
+    <thead>
+        <tr class="table-secondary text-center ">
+            <th scope="col" class="py-4">City ID</th>
+            <th scope="col" class="py-4">City Name</th>
+            <th scope="col" class="py-4">City Code</th>
+            <th scope="col" class="py-4">State ID</th>
+            <th scope="col" class="py-4">Creation Date</th>
+            <th scope="col" class="py-4">Modification Date</th>
+            <th scope="col" class="py-4">Country ID</th>
+            <th scope="col" class="py-4">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow dr in Model.Rows)
+        {
+            <tr class="table-light table-striped text-center">
+
+                <td class="py-4">@dr["CityID"]</td>
+                <td class="py-4">@dr["CityName"]</td>
+                <td class="py-4">@dr["CityCode"]</td>
+                <td class="py-4">@dr["StateID"]</td>
+                <td class="py-4">@Convert.ToDateTime(dr["CreationDate"]).ToString("D")</td>
+                <td class="py-4">@Convert.ToDateTime(dr["ModificationDate"]).ToString("D")</td>
+                <td class="py-4">@dr["CountryID"]</td>
+                <td class="d-flex" style="margin:auto; justify-content:center;">
+                    <form method="post" asp-controller="LOC_City" asp-action="Delete">
+                        <input type="hidden" name="CityID" value="@Convert.ToInt32(dr["CityID"])" />
+                        <button type="submit" class="btn btn-danger my-3 mx-2" onclick="return confirm('Are you sure you want to delete ?')">Delete</button>
+                    </form>
+                    <form method="post" asp-controller="LOC_City" asp-action="Add">
+                        <input type="hidden" name="CityID" value="@Convert.ToInt32(dr["CityID"])" />
+                        <button type="submit" class="btn btn-secondary my-3 mx-2">Edit</button>
+                    </form>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+</section>
+

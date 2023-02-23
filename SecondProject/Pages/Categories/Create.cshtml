@@ -1,0 +1,25 @@
+﻿@page
+@model SecondProject.Pages.Categories.CreateModel
+
+<div class="container mt-4  fw-bold text-dark">
+    <h3 >Create Category</h3>
+
+    <form method="post" class="mt-5">
+        <label asp-for="Category.Name" ></label> <span class="text-danger">*</span>
+        <input asp-for="Category.Name" class="form-control text-danger mt-2" style="font-weight:900;"  autocomplete="off"/>
+        <span asp-validation-for="Category.Name" class="text-danger"></span><br/>
+
+        <label asp-for="Category.DisplayOrder" class="mt-5"></label> <span class="text-danger">*</span>
+        <input asp-for="Category.DisplayOrder" class="form-control text-danger mt-2" style="font-weight:900;"  autocomplete="off" />
+        <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
+        <br/>
+        <button type="submit" class="btn btn-primary mt-4"> Create </button>
+    </form>
+</div>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}

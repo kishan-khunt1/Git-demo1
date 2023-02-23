@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "MST_ContactCategoryAddEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@model MST_ContactCategoryModel
+<div>
+
+    <section style="position:relative;top:40px;">
+    <h3>@TempData["SuccessMSG"]</h3>
+        <div>
+            <h1>Insert/Edit Record</h1>
+        </div>
+    <form method="post" asp-controller="MST_ContactCategory" asp-action="Save">
+        @Html.HiddenFor(x=>x.ContactCategoryID)
+        <div class="mb-3">
+            <label for="ContactCategoryName" class="form-label">ContactCategory Name</label>
+            <input type="text" class="form-control" asp-for="ContactCategoryName" placeholder="Enter Category Name" id="ContactCategoryName" />
+        </div>
+        <div class="mb-3">
+            <label for="CreationDate" class="form-label">Creation Date</label>
+            <input type="date" class="form-control" asp-for="CreationDate" id="CreationDate">
+        </div>
+        <div class="mb-3">
+            <label for="ModificationDate" class="form-label">Modification Date</label>
+            <input type="date" class="form-control" asp-for="ModificationDate" id="ModificationDate">
+        </div>
+        <input type="submit" class="btn btn-success" />
+    </form>
+</div>
+</section>
+

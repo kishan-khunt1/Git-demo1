@@ -1,0 +1,12 @@
+C:\Users\ABC\source\repos\BookBank.Models\bin\Debug\net6.0\BookBank.Models.deps.json
+C:\Users\ABC\source\repos\BookBank.Models\bin\Debug\net6.0\BookBank.Models.dll
+C:\Users\ABC\source\repos\BookBank.Models\bin\Debug\net6.0\BookBank.Models.pdb
+C:\Users\ABC\source\repos\BookBank.Models\obj\Debug\net6.0\BookBank.Models.csproj.AssemblyReference.cache
+C:\Users\ABC\source\repos\BookBank.Models\obj\Debug\net6.0\BookBank.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABC\source\repos\BookBank.Models\obj\Debug\net6.0\BookBank.Models.AssemblyInfoInputs.cache
+C:\Users\ABC\source\repos\BookBank.Models\obj\Debug\net6.0\BookBank.Models.AssemblyInfo.cs
+C:\Users\ABC\source\repos\BookBank.Models\obj\Debug\net6.0\BookBank.Models.csproj.CoreCompileInputs.cache
+C:\Users\ABC\source\repos\BookBank.Models\obj\Debug\net6.0\BookBank.Models.dll
+C:\Users\ABC\source\repos\BookBank.Models\obj\Debug\net6.0\refint\BookBank.Models.dll
+C:\Users\ABC\source\repos\BookBank.Models\obj\Debug\net6.0\BookBank.Models.pdb
+C:\Users\ABC\source\repos\BookBank.Models\obj\Debug\net6.0\ref\BookBank.Models.dll

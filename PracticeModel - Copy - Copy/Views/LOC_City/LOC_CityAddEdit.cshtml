@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "LOC_CityAddEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model LOC_CityModel
+<section style="position:relative;top:40px;">
+    <div>
+        <div>
+            <h1>Insert/Edit Record</h1>
+        </div>
+        <form method="post" asp-controller="LOC_City" asp-action="Save">
+            @Html.HiddenFor(x=>x.CityId)
+            <div class="mb-3">
+                <label for="CityName" class="form-label">City Name</label>
+                <input type="text" class="form-control" asp-for="CityName" placeholder="Enter City Name" id="CityName">
+            </div>
+            <div class="mb-3">
+                <label for="CityCode" class="form-label">City Code</label>
+                <input type="text" class="form-control" asp-for="CityCode" placeholder="Enter City Code" id="CityCode">
+            </div>
+            <div class="mb-3">
+                <label for="CountryID" class="form-label">Country Name</label>
+                <select class="form-control" asp-for="CountryID" id="CountryID" asp-items="@(new SelectList(ViewBag.CountryList,"CountryID","CountryName"))" onchange="fnonStateChange();">
+                    <option value="">Select Country</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="StateID" class="form-label">State Name</label>
+                <select class="form-control" asp-for="StateID" id="StateID" asp-items="@(new SelectList(ViewBag.StateList,"StateID","StateName"))">
+                    <option value="Select State">Select State</option>
+                </select>
+            </div>
+            @*<div class="mb-3">
+                <label for="CreationDate" class="form-label">Creation Date</label>
+                <input type="date" class="form-control" asp-for="CreationDate" id="CreationDate">
+            </div>*@
+            @*<div class="mb-3">
+                <label for="ModificationDate" class="form-label">Modification Date</label>
+                <input type="date" class="form-control" asp-for="ModificationDate" id="ModificationDate">
+            </div>*@
+            
+            <input type="submit" class="btn btn-success " />
+            <input type="submit" class="btn btn-danger mx-3"  value="Back to Page" asp-controller="LOC_City" asp-action="Index" />
+
+        </form>
+    </div>
+</section>
+
+<script>
+    function fnonStateChange(){
+        var CountryID = $("#CountryID").val();
+        console.log("country id", CountryID);
+        if(CountryID !== ""){
+            $("#StateID").empty();
+            $("#StateID").append($("<option></option>").val("").html("Select State"));
+            $.ajax(
+                {
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    url: "@Url.Action("DropdownByCountry", "LOC_City")" + "?&CountryID=" + CountryID,
+                    data:{},
+                    datatype: "json",
+                    success: function (Result){
+                        $.each(Result,
+                            function(key,value){
+                            $("#StateID").append($("<option></option>").val(value.stateID).html(value.stateName));
+                            });
+                },
+                error: function (r){
+                    alert("Error while loading combobox.");
+                }
+        });
+        }
+        else{
+             $("#StateID").empty();
+            $("#StateID").append($("<option></option>").val("").html("Select State"));
+        }
+    }
+    //setTimeout(()=>{
+    //    fnonStateChange();
+    //},10)
+</script>

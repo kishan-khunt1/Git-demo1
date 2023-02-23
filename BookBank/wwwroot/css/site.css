@@ -1,0 +1,36 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.demo {
+    filter: brightness(120%);
+    filter: contrast(120%);
+    filter: drop-shadow(8px 8px 8px black);
+}
+
+#box {
+    text-decoration: none;
+    color: black;
+    border-color: white;
+}
+
+#box:hover {
+    box-shadow: 0 2px 11px rgb(208, 205, 205);
+    transition: 0.3s;
+}
+

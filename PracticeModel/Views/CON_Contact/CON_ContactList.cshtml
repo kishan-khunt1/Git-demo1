@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "CON_ContactList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using System.Data
+@model DataTable
+<section style="position:relative;top:50px;">
+<div class="d-flex container">
+    <div class="fw-bold fs-3">Contact List</div>
+    <div class="position-absolute" style="right:0%;">
+        <a asp-controller="CON_Contact" asp-action="Add" class="btn btn-success">Add Contact</a>
+    </div>
+</div>
+<table class="table table-hover my-lg-5">
+    <thead>
+        <tr class="table-secondary text-center ">
+            <th scope="col" class="py-4">Contact ID</th>
+            <th scope="col" class="py-4">Contact Name</th>
+            <th scope="col" class="py-4">Contact MobileNo</th>
+            <th scope="col" class="py-4">Contact Address</th>
+            <th scope="col" class="py-4">Contact <br />Email</th>
+            <th scope="col" class="py-4">Country ID</th>
+            <th scope="col" class="py-4">State ID</th>
+            <th scope="col" class="py-4">ContactCreation Date</th>
+            <th scope="col" class="py-4">ContactModification Date</th>
+            <th scope="col" class="py-4">City ID</th>
+            <th scope="col" class="py-4">ContactCategory ID</th>
+            <th scope="col" class="py-4">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow dr in Model.Rows)
+        {
+            <tr class="table-light table-striped text-center">
+
+                <td class="py-4">@dr["ContactID"]</td>
+                <td class="py-4">@dr["ContactName"]</td>
+                <td class="py-4">@dr["ContactMobileNo"]</td>
+                <td class="py-4">@dr["ContactAddress"]</td>
+                <td class="py-4">@dr["ContactEmail"]</td>
+                <td class="py-4">@dr["CountryID"]</td>
+                <td class="py-4">@dr["StateID"]</td>
+                <td class="py-4">@Convert.ToDateTime(dr["ContactCreationDate"]).ToString("D")</td>
+                <td class="py-4">@Convert.ToDateTime(dr["ContactModificationDate"]).ToString("D")</td>
+                <td class="py-4">@dr["CityID"]</td>
+                <td class="py-4">@dr["ContactCategoryID"]</td>
+                <td class="d-flex" style="margin:auto; justify-content:center;height:16vh;">
+                    <form method="post" asp-controller="CON_Contact" asp-action="Delete">
+                        <input type="hidden" name="ContactID" value="@Convert.ToInt32(dr["ContactID"])" />
+                        <button type="submit" class="btn btn-danger my-3 mx-2" onclick="return confirm('Are you sure you want to delete ?')">Delete</button>
+                    </form>
+                    <form method="post" asp-controller="CON_Contact" asp-action="Add">
+                        <input type="hidden" name="ContactID" value="@Convert.ToInt32(dr["ContactID"])" />
+                        <button type="submit" class="btn btn-secondary my-3 mx-2">Edit</button>
+                    </form>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+</section>
+

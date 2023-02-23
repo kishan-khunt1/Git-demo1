@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PracticeModel</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PracticeModel.styles.css" asp-append-version="true" />
+    <
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid p-3 ">
+            <a class="navbar-brand text-light fw-bold col-5 px-lg-5 font-family ">ADDRESSBOOK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item px-3 ">
+                        <a class="nav-link  hover-text text-success fw-bold" aria-current="page" asp-area="" asp-controller="LOC_Country" asp-action="Index">Countries</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link hover-text text-success fw-bold" asp-area="" asp-controller="LOC_State" asp-action="Index">States</a>
+                    </li>
+
+                    <li class="nav-item px-3">
+                        <a class="nav-link hover-text text-success fw-bold" asp-area="" asp-controller="LOC_City" asp-action="Index">Cities</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link hover-text text-success fw-bold" asp-area="" asp-controller="MST_ContactCategory" asp-action="Index">ContactCategories</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link hover-text text-success fw-bold" asp-area="" asp-controller="CON_Contact" asp-action="Index">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-lg-5">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <section class="bg-dark position-absolute end-0" style="width: 100vw;">
+        <section class="text-white text-center text-lg-start bg-dark container-fluid">
+            <div class="container p-4">
+                <div class="row mt-4">
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-4 text-center">Contact Me</h5>
+                        <hr>
+                        <form class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control  my-3 p-2 fw-bold " placeholder="Your Name"
+                                       style="background-color: #CFF5E7;" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control my-3 p-2 fw-bold" placeholder=" Your Email"
+                                       style="background-color: #CFF5E7;" />
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="form-control my-3 p-2 fw-bold" placeholder="Leave a comment here..."
+                                          id="comments" style="height: 80px;background-color: #CFF5E7;"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-success my-2 p-2" style="width:100% ; " />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-4 text-center ">About Me</h5>
+                        <hr>
+                        <ul class="fa-ul " style="margin-left: 2.35em;margin-top:2em;">
+                            <li class="my-5  mx-lg-5">
+                                <span class="fa-li px-lg-5"><i class="fas fa-home"></i></span><span class="ms-2 px-lg-5">Gujrat,India</span>
+                            </li>
+                            <li class="my-5 mx-lg-5">
+                                <span class="fa-li px-lg-5"><i class="fas fa-envelope"></i></span><span class="ms-2 px-lg-5">kishankhunt508@gmail.com</span>
+                            </li>
+                            <li class="my-5 mx-lg-5">
+                                <span class="fa-li px-lg-5"><i class="fas fa-phone"></i></span><span class="ms-2 px-lg-5">+91 7874580988</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 text-center  mb-md-0" style="justify-content:center; align-items:center;">
+                        <h5 class="text-uppercase mb-4">Follow Me</h5>
+                        <hr>
+                        <!-- Facebook -->
+                        <a class="btn btn-outline-light btn-floating m-4 border rounded-circle"
+                           href="https://www.facebook.com/kishan.khunt.5872" role="button">
+                            <i class="fab fa-facebook-f text-primary"></i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="btn btn-outline-light btn-floating m-4 border rounded-circle" href="https://twitter.com/kishanKhunt02" role="button">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <!-- Google -->
+                        <a class="btn btn-outline-light btn-floating m-4 border rounded-circle"
+                           href="https://www.google.com/" role="button">
+                            <i class="fab fa-google text-danger"></i>
+                        </a>
+                        <br />
+                        <!-- Instagram -->
+                        <a class="btn btn-outline-light btn-floating m-4 border rounded-circle"
+                           href="https://instagram.com/__kishan2603__?igshid=YmMyMTA2M2Y=" role="button">
+                            <i class="fab fa-instagram" style="color:deeppink;"></i>
+                        </a>
+                        <!-- Linkedin -->
+                        <a class="btn btn-outline-light btn-floating m-4 border rounded-circle"
+                           href="https://www.linkedin.com/in/kishan-khunt-3a43a820b/" role="button">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <!-- Github -->
+                        <a class="btn btn-outline-light  btn-floating m-4 border rounded-circle"
+                           href="https://github.com/kishan-khunt1" role="button">
+                            <i class="fab fa-github text-secondary"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2021 Copyright:
+                    <a class="text-white">| All rights reserved</a>
+                </div>
+        </section>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

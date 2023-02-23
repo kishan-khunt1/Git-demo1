@@ -1,0 +1,27 @@
+﻿@page
+@model SecondProject.Pages.Categories.DeleteModel
+
+<div class="container mt-4  fw-bold text-dark">
+    <h3 >Delete Category</h3>
+
+    <form method="post" class="mt-5">
+        <input type="hidden" asp-for="Category.Id" />
+        <label asp-for="Category.Name" ></label> <span class="text-danger">*</span>
+        <input asp-for="Category.Name" disabled class="form-control text-danger mt-2" style="font-weight:900;"  autocomplete="off"/>
+        <span asp-validation-for="Category.Name" class="text-danger"></span><br/>
+
+        <label asp-for="Category.DisplayOrder" class="mt-5"></label> <span class="text-danger">*</span>
+        <input asp-for="Category.DisplayOrder" disabled class="form-control text-danger mt-2" style="font-weight:900;"  autocomplete="off" />
+        <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
+        <br/>
+        <button type="submit" class="btn btn-danger mt-4"> Delete </button>
+        <a asp-page="Index" class="btn btn-secondary mt-4">Back to List</a>
+    </form>
+</div>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}

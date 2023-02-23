@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "CON_CountactAdd/Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model CON_ContactModel
+<section style="position:relative;top:40px;">
+<div>
+    <h3>@TempData["SuccessMSG"]</h3>
+        <div>
+            <h1>Insert/Edit Record</h1>
+        </div>
+    <form method="post" asp-controller="CON_Contact" asp-action="Save">
+        @Html.HiddenFor(x=>x.ContactID)
+        <div class="mb-3">
+            <label for="ContactName" class="form-label">Name</label>
+            <input type="text" class="form-control" asp-for="ContactName" placeholder="Enter Your Name" id="ContactName">
+        </div>
+        <div class="mb-3">
+            <label for="ContactMobileNo" class="form-label">Mobile No</label>
+            <input type="text" class="form-control" asp-for="ContactMobileNo" placeholder="Enter Mobile No" id="ContactMobileNo">
+        </div>
+        <div class="mb-3">
+            <label for="ContactAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" asp-for="ContactAddress" placeholder="Enter Your Address" id="ContactAddress">
+        </div>
+        <div class="mb-3">
+            <label for="ContactEmail" class="form-label">Email</label>
+            <input type="text" class="form-control" asp-for="ContactEmail" placeholder="Enter Your Email" id="ContactEmail">
+        </div>
+        <div class="mb-3">
+            <label for="CountryID" class="form-label">Country ID</label>
+            <input type="text" class="form-control" asp-for="CountryID" placeholder="Enter Country ID" id="CountryID">
+        </div>
+        <div class="mb-3">
+            <label for="StateID" class="form-label">State ID</label>
+            <input type="text" class="form-control" asp-for="StateId" placeholder="Enter State ID" id="StateID">
+        </div>
+        <div class="mb-3">
+            <label for="ContactCreationDate" class="form-label">Creation Date</label>
+            <input type="date" class="form-control" asp-for="ContactCreationDate" id="ContactCreationDate">
+
+        </div><div class="mb-3">
+            <label for="ContactModificationDate" class="form-label">Modification Date</label>
+            <input type="date" class="form-control" asp-for="ContactModificationDate" id="ContactModificationDate">
+        </div>
+        <div class="mb-3">
+            <label for="CityID" class="form-label">City ID</label>
+            <input type="text" class="form-control" asp-for="CityID" placeholder="Enter City ID" id="CityID">
+        </div>
+        <div class="mb-3">
+            <label for="ContactCategoryID" class="form-label">ContactCategory ID</label>
+            <input type="text" class="form-control" asp-for="ContactCategoryID" placeholder="Enter ContactCategory ID" id="ContactCategoryID">
+        </div>
+        <input type="submit" class="btn btn-success" />
+    </form>
+</div>
+</section>

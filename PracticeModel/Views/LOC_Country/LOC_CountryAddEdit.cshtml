@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "LOC_CountryAdd/Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model LOC_CountryModel
+<section style="position:relative;top:40px;">
+<div>
+    <h3>@TempData["SuccessMSG"]</h3>
+    <div>
+            <h1>Insert/Edit Record</h1>
+    </div>
+    <form method="post" asp-controller="LOC_Country" asp-action="Save">
+        @Html.HiddenFor(x=>x.CountryID)
+        <div class="mb-3">
+            <label for="CountryName" class="form-label">Country Name</label>
+            <input type="text" class="form-control" asp-for="CountryName" placeholder="Enter Country Name" id="CountryName">
+        </div>
+        <div class="mb-3">
+            <label for="CountryCode" class="form-label">Country Code</label>
+            <input type="text" class="form-control" asp-for="CountryCode" placeholder="Enter Country Code" id="CountryCode">
+        </div><div class="mb-3">
+            <label for="CreationDate" class="form-label">Creation Date</label>
+            <input type="date" class="form-control" asp-for="CreationDate" id="CreationDate">
+
+        </div><div class="mb-3">
+            <label for="ModificationDate" class="form-label">Modification Date</label>
+            <input type="date" class="form-control" asp-for="ModificationDate" id="ModificationDate">
+        </div>
+        <input type="submit" class="btn btn-success" />
+    </form>
+</div>
+</section>

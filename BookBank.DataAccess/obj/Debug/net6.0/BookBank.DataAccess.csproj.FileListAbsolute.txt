@@ -1,0 +1,17 @@
+C:\Users\ABC\source\repos\BookBank.DataAccess\obj\Debug\net6.0\BookBank.DataAccess.csproj.AssemblyReference.cache
+C:\Users\ABC\source\repos\BookBank.DataAccess\obj\Debug\net6.0\BookBank.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABC\source\repos\BookBank.DataAccess\obj\Debug\net6.0\BookBank.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ABC\source\repos\BookBank.DataAccess\obj\Debug\net6.0\BookBank.DataAccess.AssemblyInfo.cs
+C:\Users\ABC\source\repos\BookBank.DataAccess\obj\Debug\net6.0\BookBank.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ABC\source\repos\BookBank.DataAccess\bin\Debug\net6.0\BookBank.DataAccess.deps.json
+C:\Users\ABC\source\repos\BookBank.DataAccess\bin\Debug\net6.0\BookBank.DataAccess.dll
+C:\Users\ABC\source\repos\BookBank.DataAccess\bin\Debug\net6.0\BookBank.DataAccess.pdb
+C:\Users\ABC\source\repos\BookBank.DataAccess\bin\Debug\net6.0\BookBank.Models.dll
+C:\Users\ABC\source\repos\BookBank.DataAccess\bin\Debug\net6.0\BookBank.Models.pdb
+C:\Users\ABC\source\repos\BookBank.DataAccess\obj\Debug\net6.0\BookBank.DataAccess.csproj.CopyComplete
+C:\Users\ABC\source\repos\BookBank.DataAccess\obj\Debug\net6.0\BookBank.DataAccess.dll
+C:\Users\ABC\source\repos\BookBank.DataAccess\obj\Debug\net6.0\refint\BookBank.DataAccess.dll
+C:\Users\ABC\source\repos\BookBank.DataAccess\obj\Debug\net6.0\BookBank.DataAccess.pdb
+C:\Users\ABC\source\repos\BookBank.DataAccess\obj\Debug\net6.0\ref\BookBank.DataAccess.dll
+C:\Users\ABC\source\repos\BookBank.DataAccess\bin\Debug\net6.0\BookBank.DataAccess.runtimeconfig.json
+C:\Users\ABC\source\repos\BookBank.DataAccess\obj\Debug\net6.0\BookBank.DataAccess.genruntimeconfig.cache
