@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\91722\\.nuget\\packages\\": {}
+    "C:\\Users\\ABC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\91722\\source\\repos\\Git-demo1\\Git-demo1.csproj",
+      "projectUniqueName": "C:\\Users\\ABC\\source\\repos\\Git-demo1\\Git-demo1.csproj",
       "projectName": "Git-demo1",
-      "projectPath": "C:\\Users\\91722\\source\\repos\\Git-demo1\\Git-demo1.csproj",
-      "packagesPath": "C:\\Users\\91722\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\91722\\source\\repos\\Git-demo1\\obj\\",
+      "projectPath": "C:\\Users\\ABC\\source\\repos\\Git-demo1\\Git-demo1.csproj",
+      "packagesPath": "C:\\Users\\ABC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ABC\\source\\repos\\Git-demo1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\91722\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ABC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
